@@ -29,7 +29,7 @@ window.onload = function() {
 //Game
 document.onkeyup = function(event) {
 	var playerGuess = event.key.toLowerCase();
-	lettersGuessed.push(playerGuess);
+	lettersGuessed.push(" " + playerGuess);
     console.log(computerGuess[0]);
 
 if ((playerGuess === computerGuess[0]) && (guessesLeft > 0)) {
@@ -52,7 +52,7 @@ var html = "<p>Guess what letter I'm thinking of! You have " + guessesLeft + " t
           "<p>Wins: " + wins + "</p>" +
           "<p>Losses: " + losses + "</p>" +
           "<p>Guesses left: " + guessesLeft + "</p>" +
-          "<p>Your guesses so far: " + lettersGuessed + "</p>";
+          "<p>Your guesses so far: " + lettersGuessed + " " + "</p>";
  
 document.querySelector("#game").innerHTML = html;
 
